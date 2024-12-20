@@ -1,0 +1,64 @@
+#!/bin/bash
+
+mkdir git
+
+yes | sudo pacman -Syu
+yes | sudo pacman -S sway gvim thunar htop cmatrix fastfetch obs-studio imv mpv xorg-xwayland qt6-wayland firefox git wget curl swaylock swaybg swayidle pamixer blueman alacritty gcc cargo go ttf-jetbrains-mono foot 
+
+
+echo '["$(tty)" == "/dev/tty1"] && exec sway' >> .bash_profile
+
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+git clone https://github.com/ianis-belu/vim.git
+
+cp vim/vimrc .vimrc
+
+yes | rm -r vim
+
+echo 'XDG_DESKTOP_DIR="$HOME/desktop"' >> .config/user-dirs.dirs
+mkdir desktop
+echo 'XDG_DOCUMENTS_DIR="$HOME/documents"' >> .config/user-dirs.dirs
+mkdir documents
+echo 'XDG_DOWNLOAD_DIR="$HOME/downloads"' >> .config/user-dirs.dirs
+mkdir downloads
+echo 'XDG_MUSIC_DIR="$HOME/music"' >> .config/user-dirs.dirs
+mkdir music
+echo 'XDG_PICTURES_DIR="$HOME/pictures"' >> .config/user-dirs.dirs
+mkdir pictures
+echo 'XDG_PUBLICSHARE_DIR="$HOME/public"' >> .config/user-dirs.dirs
+mkdir public
+echo 'XDG_TEMPLATES_DIR="$HOME/templates"' >> .config/user-dirs.dirs
+mkdir templates
+echo 'XDG_VIDEOS_DIR="$HOME/videos"' >> .config/user-dirs.dirs
+mkdir videos
+
+mkdir info
+mkdir git
+mkdir scripts
+
+echo 'export PATH="$HOME/scripts:$PATH"' >> .bashrc
+echo 'alias p="sudo pacman"'>> .bashrc
+
+
+cd git
+git clone https://aur.archlinux.org/yay.git
+cd yay
+yes | makepkg -si
+
+yes | yay -S tofi
+
+get clone https://github.com/ianis-belu/sway-config.git
+
+mkdir .config/sway
+mkdir .config/tofi
+mkdir .config/alacritty
+cp sway-config/config .config/sway/
+cp sway-config/bar scripts/
+cp sway-config/tofi .config/tofi/
+cp sway-config/alacritty.toml .config/alacritty/
+
+chmod +x scripts/bar
+
+yes | rm -r sway-config
