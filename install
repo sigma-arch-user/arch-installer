@@ -3,14 +3,14 @@
 mkdir git
 
 yes | sudo pacman -Syu
-yes | sudo pacman -S sway gvim thunar htop cmatrix fastfetch obs-studio imv mpv xorg-xwayland qt6-wayland firefox git wget curl swaylock swaybg swayidle pamixer blueman alacritty gcc cargo go ttf-jetbrains-mono foot zip unzip sl brightnessctl zathura zathura-pdf-mupdf arc-gtk-theme papirus-icon-theme openssh dunst 
+sudo pacman -S sway gvim thunar htop cmatrix fastfetch obs-studio imv mpv xorg-xwayland qt6-wayland firefox git wget curl swaylock swaybg swayidle pamixer blueman alacritty gcc cargo go ttf-jetbrains-mono foot zip unzip sl brightnessctl zathura zathura-pdf-mupdf arc-gtk-theme papirus-icon-theme openssh dunst 
 
 gsettings set org.gnome.desktop.interface gtk-theme "Arc-Dark"
 gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
 
 sudo systemctl enable sshd
 
-echo '["$(tty)" == "/dev/tty1"] && exec sway' >> .bash_profile
+echo '[[ "$(tty)" == "/dev/tty1" ]] && exec sway' >> .bash_profile
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -55,14 +55,14 @@ yes | yay -S tofi
 
 cd ~
 
-get clone https://github.com/ianis-belu/sway-config.git
+git clone https://github.com/ianis-belu/sway-config.git
 
 mkdir .config/sway
 mkdir .config/tofi
 mkdir .config/alacritty
 cp sway-config/config .config/sway/
 cp sway-config/bar scripts/
-cp sway-config/tofi .config/tofi/
+cp sway-config/tofi .config/tofi/config
 cp sway-config/alacritty.toml .config/alacritty/
 
 chmod +x scripts/bar
