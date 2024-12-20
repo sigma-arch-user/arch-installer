@@ -8,7 +8,8 @@ sudo pacman -S sway gvim thunar htop cmatrix fastfetch obs-studio imv mpv xorg-x
 gsettings set org.gnome.desktop.interface gtk-theme "Arc-Dark"
 gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
 
-sudo systemctl enable sshd
+sudo systemctl enable --now sshd
+sudo systemctl enable --now bluetooth
 
 echo '[[ "$(tty)" == "/dev/tty1" ]] && exec sway' >> .bash_profile
 
