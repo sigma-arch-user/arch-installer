@@ -49,6 +49,8 @@ yes | makepkg -si
 
 yes | yay -S tofi
 
+cd ~
+
 get clone https://github.com/ianis-belu/sway-config.git
 
 mkdir .config/sway
