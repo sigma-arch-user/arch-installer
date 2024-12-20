@@ -3,7 +3,7 @@
 mkdir git
 
 yes | sudo pacman -Syu
-sudo pacman -S sway gvim thunar htop cmatrix fastfetch obs-studio imv mpv xorg-xwayland qt6-wayland firefox ncdu git wget curl swaylock swaybg swayidle pamixer blueman alacritty gcc cargo go ttf-jetbrains-mono foot zip unzip sl brightnessctl zathura zathura-pdf-mupdf arc-gtk-theme papirus-icon-theme openssh dunst 
+sudo pacman -S sway gvim thunar htop cmatrix fastfetch obs-studio imv mpv xorg-xwayland qt6-wayland firefox ncdu git wget curl swaylock swaybg swayidle pamixer blueman alacritty gcc cargo go ttf-jetbrains-mono foot zip unzip sl brightnessctl zathura zathura-pdf-mupdf arc-gtk-theme papirus-icon-theme openssh dunst xdg-desktop-portal-wlr
 
 gsettings set org.gnome.desktop.interface gtk-theme "Arc-Dark"
 gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
