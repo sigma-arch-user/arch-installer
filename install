@@ -68,3 +68,10 @@ cp sway-config/alacritty.toml .config/alacritty/
 chmod +x scripts/bar
 
 yes | rm -r sway-config
+
+mkdir pictures/wallpapers
+cd pictures/wallpapers
+wget https://w.wallhaven.cc/full/2y/wallhaven-2ymp5g.png
+cp wallhaven-2ymp5g.png default
+
+cd ~
