@@ -3,7 +3,7 @@
 mkdir git
 
 yes | sudo pacman -Syu
-yes | sudo pacman -S sway gvim thunar htop cmatrix fastfetch obs-studio imv mpv xorg-xwayland qt6-wayland firefox git wget curl swaylock swaybg swayidle pamixer blueman alacritty gcc cargo go ttf-jetbrains-mono foot 
+yes | sudo pacman -S sway gvim thunar htop cmatrix fastfetch obs-studio imv mpv xorg-xwayland qt6-wayland firefox git wget curl swaylock swaybg swayidle pamixer blueman alacritty gcc cargo go ttf-jetbrains-mono foot zip unzip sl brightnessctl  
 
 
 echo '["$(tty)" == "/dev/tty1"] && exec sway' >> .bash_profile
