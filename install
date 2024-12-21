@@ -52,7 +52,8 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 yes | makepkg -si
 
-yes | yay -S tofi
+yes | yay -S tofi auto-cpufreq
+sudo systemctl enable --now auto-cpufreq
 
 cd ~
 
