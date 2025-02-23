@@ -54,6 +54,9 @@ echo 'export PATH="$HOME/scripts:$PATH"' >> .bashrc
 echo 'alias p="sudo pacman"'>> .bashrc
 echo 'alias suspend="systemctl suspend"'>> .bashrc
 
+mkdir .config/swaylock
+echo 'image="/home/ianis/pictures/wallpapers/default"' > .config/swaylock/config
+
 cd git
 git clone https://aur.archlinux.org/yay.git
 cd yay
