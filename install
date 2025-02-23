@@ -10,7 +10,7 @@ echo "LAPTOP: $laptop"
 mkdir git
 
 yes | sudo pacman -Syu
-sudo pacman -S ttf-font-awesome fzf imagemagick polkit-gnome sway gvim thunar htop cloc grim slurp jq cmatrix wl-clipboard bash-completion dmenu fastfetch obs-studio imv mpv xorg-xwayland qt6-wayland firefox ncdu git wget curl swaylock swaybg swayidle man-db man-pages pamixer blueman alacritty gcc rust go ttf-jetbrains-mono discord foot zip unzip sl brightnessctl zathura zathura-pdf-mupdf arc-gtk-theme papirus-icon-theme galculator openssh dunst xdg-desktop-portal-wlr
+sudo pacman -S ttf-font-awesome fzf imagemagick polkit-gnome sway gvim thunar htop cloc grim slurp jq libnotify cmatrix wl-clipboard bash-completion dmenu fastfetch obs-studio imv mpv xorg-xwayland qt6-wayland firefox ncdu git wget curl swaylock swaybg swayidle man-db man-pages pamixer blueman alacritty gcc rust go ttf-jetbrains-mono discord foot zip unzip sl brightnessctl zathura zathura-pdf-mupdf arc-gtk-theme papirus-icon-theme galculator openssh dunst xdg-desktop-portal-wlr
 
 gsettings set org.gnome.desktop.interface gtk-theme "Arc-Dark"
 gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
