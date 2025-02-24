@@ -46,6 +46,8 @@ mkdir templates
 echo 'XDG_VIDEOS_DIR="$HOME/videos"' >> .config/user-dirs.dirs
 mkdir videos
 
+mkdir pictures/screenshots
+
 mkdir info
 mkdir git
 mkdir scripts
