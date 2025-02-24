@@ -52,7 +52,9 @@ mkdir scripts
 
 echo 'export PATH="$HOME/scripts:$PATH"' >> .bashrc
 echo 'alias p="sudo pacman"'>> .bashrc
-echo 'alias suspend="systemctl suspend"'>> .bashrc
+echo 'alias suspend="systemctl suspend"' >> .bashrc
+echo 'alias ls="ls -h"' >> .bashrc
+
 
 mkdir .config/swaylock
 echo 'image="/home/ianis/pictures/wallpapers/default"' > .config/swaylock/config
