@@ -10,17 +10,18 @@ echo "LAPTOP: $laptop"
 mkdir git
 
 yes | sudo pacman -Syu
-sudo pacman -S ttf-font-awesome fzf imagemagick polkit-gnome sway tlp tlp-rdw gvim thunar tumbler htop cloc grim slurp jq libnotify cmatrix wl-clipboard bash-completion dmenu fastfetch obs-studio imv mpv xorg-xwayland qt6-wayland firefox ncdu git wget curl swaylock swaybg swayidle man-db man-pages pamixer blueman alacritty gcc rust go ttf-jetbrains-mono ttf-jetbrains-mono-nerd discord foot zip unzip sl brightnessctl zathura zathura-pdf-mupdf papirus-icon-theme galculator openssh dunst xdg-desktop-portal-wlr
+sudo pacman -S ttf-font-awesome fzf imagemagick polkit-gnome sway gvim thunar tumbler htop cloc grim slurp jq libnotify cmatrix wl-clipboard bash-completion dmenu fastfetch obs-studio imv mpv xorg-xwayland qt6-wayland firefox ncdu git wget curl swaylock swaybg swayidle man-db man-pages pamixer blueman alacritty gcc rust go ttf-jetbrains-mono ttf-jetbrains-mono-nerd discord foot zip unzip sl brightnessctl zathura zathura-pdf-mupdf papirus-icon-theme galculator openssh dunst xdg-desktop-portal-wlr
+[[ $laptop == true ]] && yes | sudo pacman -S tlp tlp-rdw
 
 gsettings set org.gnome.desktop.interface gtk-theme "Arc-Dark"
 gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
 
 sudo systemctl enable --now sshd
 sudo systemctl enable --now bluetooth
-sudo systemctl enable tlp
-sudo systemctl mask systemd-rfkill.socket 
-sudo systemctl mask systemd-rfkill.service
-sudo tlp start
+[[ $laptop == true ]] && sudo systemctl enable tlp
+[[ $laptop == true ]] && sudo systemctl mask systemd-rfkill.socket 
+[[ $laptop == true ]] && sudo systemctl mask systemd-rfkill.service
+[[ $laptop == true ]] && sudo tlp start
 
 echo '[[ "$(tty)" == "/dev/tty1" ]] && exec sway' >> .bash_profile
 
