@@ -10,7 +10,7 @@ echo "LAPTOP: $laptop"
 mkdir git
 
 yes | sudo pacman -Syu
-sudo pacman -S ttf-font-awesome fzf imagemagick polkit-gnome sway gvim thunar tumbler htop cloc grim slurp jq libnotify cmatrix wl-clipboard bash-completion dmenu fastfetch obs-studio imv mpv xorg-xwayland qt6-wayland firefox ncdu git wget curl swaylock swaybg swayidle man-db man-pages pamixer blueman alacritty gcc rust go ttf-jetbrains-mono discord foot zip unzip sl brightnessctl zathura zathura-pdf-mupdf papirus-icon-theme galculator openssh dunst xdg-desktop-portal-wlr
+sudo pacman -S ttf-font-awesome fzf imagemagick polkit-gnome sway tlp tlp-rdw gvim thunar tumbler htop cloc grim slurp jq libnotify cmatrix wl-clipboard bash-completion dmenu fastfetch obs-studio imv mpv xorg-xwayland qt6-wayland firefox ncdu git wget curl swaylock swaybg swayidle man-db man-pages pamixer blueman alacritty gcc rust go ttf-jetbrains-mono discord foot zip unzip sl brightnessctl zathura zathura-pdf-mupdf papirus-icon-theme galculator openssh dunst xdg-desktop-portal-wlr
 
 gsettings set org.gnome.desktop.interface gtk-theme "Arc-Dark"
 gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
@@ -75,10 +75,13 @@ git clone https://github.com/sigma-arch-user/sway-config.git
 mkdir .config/sway
 mkdir .config/tofi
 mkdir .config/alacritty
+mkdir .config/dunst
 cp sway-config/config .config/sway/
 cp sway-config/bar scripts/
 cp sway-config/tofi .config/tofi/config
 cp sway-config/alacritty.toml .config/alacritty/
+cp sway-config/dunstrc .config/dunst/
+sudo cp sway-config/tlp.conf /etc/tlp.conf
 
 chmod +x scripts/bar
 
