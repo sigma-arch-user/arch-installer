@@ -18,6 +18,9 @@ gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
 sudo systemctl enable --now sshd
 sudo systemctl enable --now bluetooth
 sudo systemctl enable tlp
+sudo systemctl mask systemd-rfkill.socket 
+sudo systemctl mask systemd-rfkill.service
+sudo tlp start
 
 echo '[[ "$(tty)" == "/dev/tty1" ]] && exec sway' >> .bash_profile
 
