@@ -10,7 +10,7 @@ echo "LAPTOP: $laptop"
 mkdir git
 
 yes | sudo pacman -Syu
-yes | sudo pacman -S ttf-font-awesome ttf-dejavu noto-fonts noto-fonts-cjk noto-fonts-emoji fzf imagemagick polkit-gnome sway gvim gvfs gvfs-mtp gvfs-smb file-roller thunar tumbler thunar-volman thunar-archive-plugin libreoffice-fresh htop btop cloc grim slurp jq libnotify cmatrix wl-clipboard bash-completion dmenu fastfetch obs-studio imv mpv xorg-xwayland qt6-wayland firefox ncdu git wget curl swaylock swaybg swayidle man-db man-pages pamixer blueman alacritty gcc rust go ttf-jetbrains-mono ttf-jetbrains-mono-nerd discord foot zip unzip sl brightnessctl papirus-icon-theme galculator openssh dunst xdg-desktop-portal-wlr cups system-config-printer simple-scan  
+yes | sudo pacman -S ttf-font-awesome ttf-dejavu noto-fonts noto-fonts-cjk noto-fonts-emoji fzf imagemagick polkit-gnome sway gvim gvfs gvfs-mtp gvfs-smb file-roller thunar tumbler thunar-volman thunar-archive-plugin libreoffice-fresh htop btop cloc grim slurp jq libnotify cmatrix wl-clipboard bash-completion dmenu fastfetch obs-studio imv mpv xorg-xwayland qt6-wayland firefox ncdu git wget curl swaylock swaybg swayidle man-db man-pages pamixer blueman alacritty gcc rust go ttf-jetbrains-mono ttf-jetbrains-mono-nerd discord foot zip unzip sl brightnessctl papirus-icon-theme galculator openssh dunst xdg-desktop-portal-wlr cups system-config-printer simple-scan hplip gutenprint  
 [[ $laptop == true ]] && yes | sudo pacman -S tlp tlp-rdw
 
 gsettings set org.gnome.desktop.interface gtk-theme "Arc-Dark"
