@@ -60,14 +60,14 @@ mkdir pictures/screenshots
 
 mkdir info
 mkdir git
-mkdir scripts
+mkdir -p scripts/shortcuts
 
 echo 'export PATH="$HOME/scripts:$PATH"' >> .bashrc
 echo 'alias p="sudo pacman"'>> .bashrc
 echo 'alias suspend="systemctl suspend"' >> .bashrc
 
 mkdir .config/swaylock
-echo 'image="/home/ianis/pictures/wallpapers/default"' > .config/swaylock/config
+echo 'image="/home/ianis/pictures/wallpapers/.wallpaper"' > .config/swaylock/config
 
 cd git
 git clone https://aur.archlinux.org/yay.git
@@ -84,16 +84,15 @@ git clone https://github.com/sigma-arch-user/sway-config.git
 
 mkdir .config/sway
 mkdir .config/tofi
-mkdir .config/alacritty
+mkdir .config/foot
 mkdir .config/dunst
 cp sway-config/config .config/sway/
-cp sway-config/bar scripts/
+cp sway-config/bar .config/sway
 cp sway-config/tofi .config/tofi/config
-cp sway-config/alacritty.toml .config/alacritty/
+cp sway-config/foot.ini .config/foot/
 cp sway-config/dunstrc .config/dunst/
-sudo cp sway-config/tlp.conf /etc/tlp.conf
 
-chmod +x scripts/bar
+chmod +x .config/sway/bar
 
 yes | rm -r sway-config
 
